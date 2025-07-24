@@ -63,6 +63,17 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			backgroundImage: {
+				'hero-gradient': 'var(--hero-gradient)',
+				'hero-accent': 'var(--hero-accent)',
+			},
+			boxShadow: {
+				'card': '0 4px 6px -1px hsl(var(--card-shadow)), 0 2px 4px -1px hsl(var(--card-shadow))',
+				'card-hover': '0 20px 25px -5px hsl(var(--card-shadow-hover)), 0 10px 10px -5px hsl(var(--card-shadow-hover))',
+			},
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
