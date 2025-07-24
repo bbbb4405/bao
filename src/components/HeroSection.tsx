@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ChevronDown, Code, Github, Facebook, Sparkles, Star } from 'lucide-react';
-import profileImage from '@/assets/profile-placeholder.jpg';
+import profileImage from '@/assets/anime-avatar.jpg';
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
