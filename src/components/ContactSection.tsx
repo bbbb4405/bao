@@ -1,25 +1,19 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Github, Facebook, Mail, MapPin, Phone } from 'lucide-react';
-
 const ContactSection = () => {
-  const socialLinks = [
-    {
-      icon: Facebook,
-      label: 'Facebook',
-      url: 'https://www.facebook.com/honguyen.duybao8/',
-      description: 'Connect with me on Facebook'
-    },
-    {
-      icon: Github,
-      label: 'GitHub',
-      url: 'https://github.com/bbbb4405',
-      description: 'View my code repositories'
-    }
-  ];
-
-  return (
-    <section id="contact" className="py-20 bg-background">
+  const socialLinks = [{
+    icon: Facebook,
+    label: 'Facebook',
+    url: 'https://www.facebook.com/honguyen.duybao8/',
+    description: 'Connect with me on Facebook'
+  }, {
+    icon: Github,
+    label: 'GitHub',
+    url: 'https://github.com/bbbb4405',
+    description: 'View my code repositories'
+  }];
+  return <section id="contact" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -101,11 +95,7 @@ const ContactSection = () => {
             </h3>
             
             <div className="grid gap-6">
-              {socialLinks.map((link, index) => (
-                <Card 
-                  key={index}
-                  className="shadow-card hover:shadow-card-hover transition-all duration-300 hover:scale-105"
-                >
+              {socialLinks.map((link, index) => <Card key={index} className="shadow-card hover:shadow-card-hover transition-all duration-300 hover:scale-105">
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
@@ -121,45 +111,21 @@ const ContactSection = () => {
                           </p>
                         </div>
                       </div>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => window.open(link.url, '_blank')}
-                        className="hover:bg-primary hover:text-primary-foreground"
-                      >
+                      <Button variant="outline" size="sm" onClick={() => window.open(link.url, '_blank')} className="hover:bg-primary hover:text-primary-foreground">
                         Visit
                       </Button>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
               
               {/* Call to Action Card */}
               <Card className="shadow-card-hover bg-hero-gradient">
-                <CardContent className="p-8 text-center">
-                  <h4 className="text-xl font-semibold text-primary-foreground mb-4">
-                    Let's Work Together
-                  </h4>
-                  <p className="text-primary-foreground/80 mb-6">
-                    Ready to bring fresh perspective and dedication to your team. 
-                    Let's discuss how I can contribute to your next project!
-                  </p>
-                  <Button
-                    variant="secondary"
-                    size="lg"
-                    onClick={() => window.open('https://www.facebook.com/honguyen.duybao8/', '_blank')}
-                    className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-                  >
-                    Start a Conversation
-                  </Button>
-                </CardContent>
+                
               </Card>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
